@@ -4,18 +4,12 @@ version = "0.1.1"
 description = "venn4py package for generating Venn diagrams"
 authors = ["Mikhail Volkov <mvolkov@unistra.fr>"]
 readme = "README.md"
-requires-python = ">=3.7"
 packages = [{include = "venny4py"}]
 
 [tool.poetry.dependencies]
 python = "^3.7"
 matplotlib = "^3.0"
 
-
-[tool.poetry.classifiers]
-programming-language = "Python :: 3"
-license = "OSI Approved :: MIT License"
-operating-system = "OS Independent"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
