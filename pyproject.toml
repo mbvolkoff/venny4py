@@ -9,9 +9,11 @@ version = "0.1.1"
 description = "venn4py"
 readme = "README.md"
 requires-python = ">=3.7"
-dependencies = [
-    "matplotlib",
-]
+
+[tool.poetry.dependencies]
+python = "^3.7"
+matplotlib = "^3.0"
+
 
 [tool.poetry.classifiers]
 programming-language = "Python :: 3"
