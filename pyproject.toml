@@ -2,7 +2,7 @@
 requires = ["poetry-core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"
 
-[project]
+[tool.poetry]
 name = "venny4py"
 version = "0.1.1"
 description = "venn4py package for generating Venn diagrams"
