@@ -162,3 +162,4 @@ def venny4py(sets={}, out='./', output_filename="",  asax=False, ext='png', dpi=
         if not output_filename:
             output_filename = f'Venn_{len(sets)}'
         fig.savefig(f'{out}/{output_filename}.{ext}', bbox_inches='tight', facecolor='w', )
+        return fig
