@@ -2,7 +2,7 @@ from itertools import combinations
 import matplotlib.pyplot as plt
 import matplotlib.patches as mpatches
 from matplotlib.patches import Ellipse
-
+import io
 
 #get shared elements for each combination of sets
 def get_shared(sets):
@@ -41,7 +41,7 @@ def get_unique(shared):
 
 
 #plot Venn
-def venny4py(sets={}, out='./', output_filename="",  asax=False, ext='png', dpi=300, size=3.5):
+def venny4py(sets={}, out='./', output_filename="",  asax=False, ext='png', dpi=300, size=3.5, buffer=False):
     shared = get_shared(sets)
     unique = get_unique(shared)
     ce = 'bgrc' #colors
@@ -162,4 +162,9 @@ def venny4py(sets={}, out='./', output_filename="",  asax=False, ext='png', dpi=
         if not output_filename:
             output_filename = f'Venn_{len(sets)}'
         fig.savefig(f'{out}/{output_filename}.{ext}', bbox_inches='tight', facecolor='w', )
-        return fig
+        
+        if buffer:
+            buffer = io.BytesIO()
+            fig.savefig(buffer, format='png')
+            return buffer
+
